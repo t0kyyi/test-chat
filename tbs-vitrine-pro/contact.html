@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – TBS Sécurité Privée</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/images/logo.png" alt="TBS Logo" class="logo">
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="equipe.html">Équipe</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">☰</div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact" data-aos="fade-up">
+    <h1>Contactez-nous</h1>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <input type="text" name="nom" placeholder="Nom" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-secondary">Envoyer</button>
+    </form>
+  </main>
+
+  <footer class="site-footer" data-aos="fade-in">
+    <div class="container">
+      <p>&copy; 2025 TBS Sécurité Privée – Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script> AOS.init({ once: true, duration: 800 }); </script>
+</body>
+</html>

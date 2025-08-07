@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil – TBS Sécurité Privée</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/images/logo.png" alt="TBS Logo" class="logo">
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="equipe.html">Équipe</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">☰</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Carrousel -->
+  <section id="hero" class="hero" data-aos="fade-in">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>VOTRE SÉCURITÉ, NOTRE PRIORITÉ</h1>
+      <p>Gardiennage, rondes, sécurité incendie et vidéosurveillance 24h/24 en Normandie.</p>
+      <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+    </div>
+  </section>
+
+  <!-- Nos Services (aperçu) -->
+  <section id="services-preview" class="services container" data-aos="fade-up">
+    <h2>Nos Services</h2>
+    <div class="grid">
+      <div class="card" data-aos="flip-left">
+        <img src="assets/images/icon-guard.png" alt="">
+        <h3>Gardiennage</h3>
+        <p>Surveillance permanente de vos sites sensibles.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="100">
+        <img src="assets/images/icon-patrol.png" alt="">
+        <h3>Rondes & Interventions</h3>
+        <p>Interventions rapides sur alarme ou demande spécifique.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="200">
+        <img src="assets/images/icon-fire.png" alt="">
+        <h3>Sécurité Incendie</h3>
+        <p>Agents SSIAP pour prévention et gestion des risques.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="300">
+        <img src="assets/images/icon-camera.png" alt="">
+        <h3>Vidéosurveillance</h3>
+        <p>Installation et supervision de systèmes connectés.</p>
+      </div>
+    </div>
+    <p class="more"><a href="services.html">Voir tous les services →</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-aos="fade-in">
+    <div class="container">
+      <p>&copy; 2025 TBS Sécurité Privée – Tous droits réservés</p>
+      <ul class="social">
+        <li><a href="#"><img src="assets/images/icon-facebook.svg" alt="Facebook"></a></li>
+        <li><a href="#"><img src="assets/images/icon-linkedin.svg" alt="LinkedIn"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+</body>
+</html>
