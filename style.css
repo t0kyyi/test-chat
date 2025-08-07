@@ -1,146 +1,161 @@
-body {
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
 header {
-  background: #000;
-  color: #fff;
+  background-color: #0e1a2b;
+  color: white;
   padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container {
+  width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .logo {
-  font-size: 24px;
-  font-weight: 600;
+  height: 40px;
 }
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-
 nav a:hover {
-  color: #00c8ff;
+  color: #ffc107;
 }
-
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
 .hero {
-  background: url('https://images.unsplash.com/photo-1581091012184-7f6361435a12?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-  color: #fff;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
   height: 90vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
   padding: 0 20px;
 }
-
-.hero-content {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  border-radius: 10px;
+.hero-content h1 {
+  font-size: 48px;
   animation: fadeIn 1s ease-out;
 }
-
-.cta {
-  background: #00c8ff;
-  color: #fff;
-  padding: 12px 24px;
+.hero-content p {
   margin-top: 20px;
-  display: inline-block;
+  font-size: 20px;
+  animation: fadeIn 2s ease-out;
+}
+.cta {
+  margin-top: 30px;
+  background-color: #ffc107;
+  color: #0e1a2b;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
   text-decoration: none;
-  border-radius: 30px;
+  font-weight: bold;
   transition: background 0.3s;
 }
-
 .cta:hover {
-  background: #0099cc;
+  background-color: #e0a800;
 }
-
-section {
+.section {
   padding: 60px 20px;
+  text-align: center;
 }
-
-.container {
-  max-width: 1100px;
-  margin: auto;
+.section h2 {
+  margin-bottom: 30px;
+  color: #0e1a2b;
 }
-
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
-
 .card {
-  background: white;
+  background-color: white;
   padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-
 form {
+  max-width: 500px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
 input, textarea {
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 16px;
 }
-
 button {
-  background: #000;
-  color: #fff;
-  border: none;
   padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #0e1a2b;
+  color: white;
+  border: none;
+  border-radius: 8px;
   font-size: 16px;
+  cursor: pointer;
 }
-
 button:hover {
-  background: #333;
+  background-color: #1c2e48;
 }
-
 footer {
+  background-color: #0e1a2b;
+  color: white;
   text-align: center;
-  padding: 20px;
-  background: #000;
-  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 40px;
 }
-
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #0e1a2b;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
 }
